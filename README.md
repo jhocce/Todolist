@@ -11,3 +11,9 @@ De igual manera en este archivo se encuentra lo necesario para iniciar la app en
 Antes de iniciar el servidor recuerde instalar a su entorno local los requirements en el archivo 
 
 	<directorio> /proyecto/requirements.txt
+
+Una ves realizadas las migraciones iniciales podra acceder a la app en el enlace:
+
+	http://localhost:8000/
+
+	

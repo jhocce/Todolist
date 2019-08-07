@@ -25,7 +25,7 @@
 		<form method="post" role="form">
 		 	{% csrf_token %}
 		 	<!-- {{ form.as_p }} -->
-		 	<div id="cabeceras"><h4>Registro de usuario</h4></div>
+		 	<div id="cabeceras"><h3>Registro de usuario</h3></div>
 			<div><label>Usuario: </label> {{form.username}}</div>
 			{% if form.username.errors %}
 				<div class="errors"><label> {{ form.username.errors }}</label></div>
