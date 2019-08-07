@@ -21,7 +21,7 @@ DJANGO_APPS=[
     
 ]
 OAPPS_TREH = [
-
+    'rest_framework',
 ]
 
 INSTALLED_APPS = LOCAL_APPS + DJANGO_APPS + OAPPS_TREH
