@@ -3,6 +3,7 @@ from datetime import datetime, date, timedelta
 from django.shortcuts import render
 from django.http import JsonResponse, HttpResponse
 from django.core import serializers
+from rest_framework import Response
 from django.views.generic import TemplateView, CreateView, ListView, DetailView, UpdateView, DeleteView
 from braces.views import LoginRequiredMixin
 from rest_framework.response import Response
