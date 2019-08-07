@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+
+	<title>..::Resgistro de Usuario::..</title>
+</head>
+
+<body>
+
+<header>
+	<h4>Registro de usuario:</h4>
+	<div>
+		<ul>
+			<li> <a href="/tareas/agenda/"> Invitado <i class="fa fa-user" aria-hidden="true"></i> <!-- <i class="fa fa-sort-desc"></i> --> </a>  
+			</li>
+		</ul>
+	</div>
+</header>
+<main>
+	
+		<form method="post" role="form">
+		 	{% csrf_token %}
+		 	<!-- {{ form.as_p }} -->
+		 	<div id="cabeceras"><h4>Registro de usuario</h4></div>
+			<div><label>Usuario: </label> {{form.username}}</div>
+			{% if form.username.errors %}
+				<div class="errors"><label> {{ form.username.errors }}</label></div>
+			{% endif %}
+			<div><label>Nombres: </label>{{ form.first_name }} </div>
+			{% if form.first_name.errors %}
+				<div class="errors"><label> {{form.first_name.errors}} </label></div>
+			{% endif %}
+			<div><label>Apellidos: </label>{{form.last_name}} </div>
+			{% if form.last_name.errors %}
+				<div class="errors"><label>{{ form.last_name.errors }}</label></div>
+			{% endif %}
+			<div><label>Email: </label>{{form.email}} </div>
+			{% if form.email.errors  %}
+				<div class="errors"><label>{{ form.email.errors }}</label></div>
+			{% endif %}
+			<div><label>Password: </label>{{form.password}} </div>
+			{% if form.password.errors %}
+				<div class="errors"><label>{{ form.password.errors }}</label></div>
+			{% endif %}
+
+			<div class="herramientas">
+				<a href="{% url 'user:login' %}">Volver</a>
+				<input type="submit" name="guardar" value="Registrar">
+			</div>
+            
+        </form>
+
+</main>
+<footer>
+	 ..:: App de Prueba ::..
+</footer>
+</body>
+</html>

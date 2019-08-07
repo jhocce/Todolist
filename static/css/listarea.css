@@ -1,0 +1,42 @@
+#agenda{
+	width: 90%;
+}
+div#tarea > div > a{
+	color: #000;
+	text-decoration: none;
+}
+#cabeceras, .tarea{
+	display: flex;
+	justify-content: space-around;
+	flex-flow: row wrap;
+	border-bottom: 1px solid #1b2ca5;
+}
+
+h1{
+	font-style: normal;
+	font-size: 13px;
+	color: #cecece;
+}
+h3{
+	border-bottom: 2px solid #ab88d2;
+}
+.tarea{
+	width: 100%;
+}
+#agenda{
+	border: 1px solid #cecece4d;
+}
+div.tarea > div,
+div#cabeceras > div{
+	text-align: center;
+	width: 16.6%;
+}
+div.tarea > div:not(:nth-child(6)),
+div#cabeceras > div:not(:nth-child(6)){
+	border-right: 1px solid #000;
+}
+
+.fa{
+	cursor: pointer;
+	font-size: 18px;
+}

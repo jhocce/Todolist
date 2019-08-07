@@ -1,0 +1,42 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %} {% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+	<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}"> -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+	<!-- <script src="https://kit.fontawesome.com/b1940f1a51.js"></script> -->
+	<script type="text/javascript" src="{% static '/js/jquery.js' %}"></script>
+	<!-- <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script> -->
+</head>
+<body>
+<header>
+	<h4>..:: App de Prueba ::..</h4>
+	<div>
+		<ul>
+			<li> <a href="{% url 'user:user_detail' request.user.pk %}"> {{ request.user}} <i class="fa fa-user" aria-hidden="true"></i> <!-- <i class="fa fa-sort-desc"></i> --> </a>  
+				<ul>
+					<li><a href="{% url 'tareas:agenda' %}" title="Agregrar ortra">Agenda<i  class="fa fa-address" aria-hidden="true"></i></a></li>
+					<li><a href="{% url 'tareas:crear' %}" title="Agregrar ortra">Agregar Tarea <i class="fa fa-plus"></i></a></li>
+
+					<li><a href="/user/logout/"> Salir </a> </li>
+				</ul>
+			</li>
+		</ul>
+		
+	</div>
+</header>
+
+<main>
+	{% block content %}
+	{% endblock %}
+</main>
+<footer>
+	 ..:: App de Prueba ::..
+</footer>
+</body>
+</html>
+
+

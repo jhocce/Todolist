@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %} Datos personales {% endblock %}
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/tarea_detail.css' %}">
+<a class="atras" title="Volver" href="{% url 'tareas:agenda' %}"><i class="fa fa-chevron-left" aria-hidden="true"></i> </a>
+
+<div id="tarea_detail">
+	<div id="cabecera">
+		<div>
+			<h3>Tus Datos: </h3>
+		</div>		
+	</div>
+	<div>
+		<label>Nickname:</label> 
+		<label>{{ user.username }}</label> 
+	</div>
+	<div>
+		<label>Nombres:</label> 
+		<label>{{ user.first_name }}</label> 
+	</div>
+	<div>
+		<label>Apellidos:</label>
+		<label>{{ user.last_name }}</label>
+	</div>
+	<div>
+		<label>Email:</label>
+		<label> {{ user.email }}</label>
+	</div>
+	<div>
+		<label>Contraseña:</label>
+		<label class="clave"> ops!. No podemos mostrar tu clave aqui! Bueno.. no sabemos cual es.. si deseas modificarla darle click en editar.. </label>
+	</div>
+	<div class="herramientas">
+		<a href="{% url 'user:user_update' user.pk %}" title="Editar"><i class="fa fa-pencil"></i></a>
+<!-- 		<a href="" title="Eliminar"><i class="fa fa-trash"></i></a> -->
+		<!--  -->
+	</div>
+</div>
+
+
+{% endblock %}

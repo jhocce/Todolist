@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %} {{ Actividad }} {% endblock %}
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/tarea_create.css' %}">
+<a class="atras" title="Volver" href="{% url 'tareas:agenda' %}"><i class="fa fa-chevron-left" aria-hidden="true"></i> </a>
+<form method="post" class="update">
+	<div><h3> Editar tarea: </h3></div>
+		{% csrf_token %}
+		<!-- {{ form.as_p }} -->
+		<div><label> Titulo: </label>{{ form.Titulo }} {{form.Titulo.errors }}</div>
+		<div><label> Fecha: </label>{{  form.Fecha }} {{form.Fecha.errors }} </div>
+		<div><label> Hora: </label> {{  form.Hora }} {{form.Hora.errors }} </div>
+		<div><label> Descripción: </label>{{ form.Description }} {{form.Description.errors }}</div>
+		<div class="herramientas"><input type="submit" name="enviar" value="Actualizar"></div>
+</form>
+{% endblock %}

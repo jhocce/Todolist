@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %} Nueva Tarea {% endblock %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/tarea_create.css' %}">
+ 
+<form method="post" class="delete">
+	{% csrf_token %}
+    <div><label>¿Estas seguro de eliminar  <h3>"{{ object }}" ?</h3></label> </div>
+    <div class="herramientas"> 
+    	<a class="atras" title="Volver" href="{% url 'tareas:agenda' %}"><i class="fa fa-chevron-left" aria-hidden="true"></i> </a>
+    	<input type="submit" value="Eliminar" >
+    </div>
+</form>
+
+{% endblock %}

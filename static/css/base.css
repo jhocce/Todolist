@@ -1,0 +1,110 @@
+header {
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row wrap;
+	background-color: #85508cde;
+	box-shadow: 1px 1px 6px 1px;
+
+}
+h4{
+	padding-top: 9px;
+    margin-left: 30px;
+    border-right: 3px solid #000;
+    width: 16%;
+}
+header > div > ul > li > a{
+	color: #fff;
+	list-style: none;
+}
+header > div > ul {
+	display: flex;
+	justify-content: space-around;
+	flex-flow: wrap column; 
+	width: 150px;
+}
+
+header > div > ul > li
+{
+	padding: 10px;
+	width: 100%;
+	text-align: left;
+	/*cursor: pointer;*/
+	color: #fff;
+	background: rgba(2,84,185,1);
+	display: flex;
+	justify-content: center;
+}
+header > div > ul > li > ul > li{
+	background: rgba(2,84,185,1);
+	width: 100%;
+	height: 30px;
+	padding: 10px;
+	margin-top: 0px;
+	border-top: 1px solid #fff;
+}
+header > div > ul > li > ul > li> a{
+	color: #fff;
+}
+header > div > ul > li > ul
+{
+	display: none;
+	position: absolute;
+	width: 150px;
+    right: 0px;
+    margin-top: 29px;
+    height: 30px;
+
+
+}
+header > div > ul > li:hover  ul {
+	display: block; 
+	background-color: #ececec;
+}
+main{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 40px;
+	min-height: 300px;
+	overflow: auto;
+}
+footer {
+   position:relative;
+   left:0px;
+   bottom:0px;
+   height:50px;
+   width:100%;
+   background:#999;
+   text-align: center;
+   margin-top: 80px;
+   border-top: 1px solid #19020287;
+   padding-top: 15px;
+}
+
+a.atras
+{
+	position: absolute;
+    left: 10px;
+    font-size: 30px;
+}
+
+input[type=text],
+input[type=date],
+input[type=time],
+input[type=email],
+input[type=password],
+textarea
+{
+	height: 30px;
+    border: 1px solid #b6cbda;
+    border-radius: 4px;
+    padding-left: 11px;
+}
+div.errors > label
+{
+	font-size: 10px;
+	color: red;
+}
+
+i.fa{
+	color: #151517a8;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+
+	<title>..::Login::..</title>
+</head>
+
+<body>
+
+<header>
+	<h4>..:: App de Prueba ::..</h4>
+	<div>
+		<ul>
+			<li>
+				<a href="/tareas/agenda/"> Invitado <i class="fa fa-user" aria-hidden="true"></i> </a>  
+			</li>
+		</ul>
+	</div>
+</header>
+<main>
+	
+		<form method="post" role="form">
+		 	{% csrf_token %}
+		 	<!-- {{ form.as_p }} -->
+		 		<div class="cabecera"><h3>Inicio de sesión</h3></div>
+            	<div>
+               		<label>Usuario: </label>{{ form.username }}
+               		{{ form.username.errors }}
+                </div> 
+                <div>
+               		<label>Contraseña: </label> {{ form.password }}
+               		{{ form.password.errors }}
+               	</div>
+            	{% if form.errors %}
+               		<div class="errors"> Usuario o contraseña invalido </div>
+               	{% endif %}
+               	
+                <div class="herramientas">
+              		<a href="{% url 'user:user_create' %}">Registrarme</a>
+              		<input type="submit" value="Entrar"/>
+              </div>
+            
+        </form>
+
+</main>
+<footer>
+	 ..:: App de Prueba ::..
+</footer>
+</body>
+</html>

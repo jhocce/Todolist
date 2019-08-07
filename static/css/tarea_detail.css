@@ -1,0 +1,94 @@
+#tarea_detail{
+	width: 60%;
+	border: 1px solid #cecece4d;
+	display: flex;
+	justify-content: space-around;
+	flex-flow: column wrap;
+	border-bottom: 1px solid #1b2ca5;
+	border-radius: 4px;
+}
+
+h3{
+	border-bottom: 2px solid #ab88d2;
+}
+.vencido{
+	background-color: #e62020fc;
+	color: #fff;
+}
+.novencido{
+	background-color: #2da71efc;
+	color: #fff;
+}
+#cabecera{
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row wrap;
+	border-bottom: 1px solid #1b2ca5;
+	padding: 10px;
+}
+#cabecera > div:nth-child(1){
+	padding: 7px;
+	font-size: 16px;
+/*	padding-left: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;*/
+}
+#cabecera > div:nth-child(2){
+	padding: 7px;
+    height: 40px;
+    width: 43%;
+    box-shadow: 1px 1px 0px 0px #000;
+    border-radius: 2px;
+
+}
+
+
+#tarea_detail > div:not(nth-child(.herramientas)){
+	/*min-height:40px; 
+	width: 100%;
+	border-bottom: 1px solid #1b2ca5;
+	padding: 10px;*/
+	min-height:40px; 
+	width: 100%;
+	border-bottom: 1px solid #1b2ca5;
+	padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row;
+
+}
+
+div > label:nth-child(1)
+{
+	padding: 15px;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+
+a.atras
+{
+	position: absolute;
+    left: 10px;
+    font-size: 30px;
+}
+
+.herramientas{
+	display: flex;
+    justify-content: space-around;
+}
+
+
+.herramientas > a{
+	display: flex;
+    justify-content: center;
+    border: 0px solid skyblue;
+    padding: 4px;
+    cursor: pointer;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.clave{
+	font-size: 9px;
+}

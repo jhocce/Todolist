@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %} Nueva Tarea {% endblock %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/listarea.css' %}">
+<script type="text/javascript" src="{% static 'js/acciones.js' %}"></script>
+
+
+	<div id="agenda">
+		<h3>Agenda:</h3>
+		<div id="cabeceras">
+			<div>Estado</div><div>Titulo</div><div> Descripción</div><div>Hora</div><div>Fecha</div><div>Acciones</div>
+		</div>
+		{% if vacio %}
+			 <div class="tarea"><h4>No hay actividades por ahora..</h4></div>	
+		{% endif %}
+
+
+		{% for des , tarea  in object_list %}
+			
+				<div class="tarea"> 
+					
+					{% if tarea.Status %} 
+				 		<div> <i class="fa fa-toggle-on" >
+				 			<input type="hidden" name="pk" value="{{ tarea.pk }}">
+				 		</i>  <h1>Lista</h1></div> 
+					{% else %}
+						<div> <i class="fa fa-toggle-off" >
+							<input type="hidden" name="pk" value="{{ tarea.pk }}">
+						</i>  <h1>Pendiente</h1></div> 
+					{% endif %}
+				
+				<div>{{ tarea.Titulo }} </div> 
+				<div>{{ des }}</div>
+				<div>{{ tarea.Hora }}</div>
+				<div>{{ tarea.Fecha }}</div>
+				<div>
+					<a title="Ver" href="{% url 'tareas:tarea_detail' tarea.pk %}"><i class="fa fa-eye" aria-hidden="true"></i> </a>
+					<a href="{% url 'tareas:tarea_eliminar' tarea.pk %}" title="Eliminar"><i class="fa fa-trash"></i></a>
+					<a href="{% url 'tareas:tarea_editar' tarea.pk %}" title="Editar"><i class="fa fa-edit"></i></a>
+				</div>
+				</div>
+			
+			
+		{%endfor%}
+	</div>
+
+{% endblock %}

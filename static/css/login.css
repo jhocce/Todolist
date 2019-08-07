@@ -1,0 +1,142 @@
+header {
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row wrap;
+	background-color: #85508cde;
+	border-bottom: 1px solid #000;
+
+}
+
+h4{
+	padding-top: 9px;
+    margin-left: 30px;
+    border-right: 3px solid #000;
+    width: 16%;
+}
+h3{
+	margin-top: 5px;
+	border-bottom: 2px solid #ab88d2;
+	font-size: 19px;
+}
+
+header > div > ul > li > a{
+	color: #fff;
+	list-style: none;
+}
+header > div > ul {
+	display: flex;
+	justify-content: space-around;
+	flex-flow: wrap column; 
+	width: 150px;
+}
+
+header > div > ul > li
+{
+	padding: 10px;
+	width: 100%;
+	text-align: left;
+	/*cursor: pointer;*/
+	color: #fff;
+	background: rgba(2,84,185,1);
+	display: flex;
+	justify-content: center;
+}
+
+
+
+
+
+.herramientas{
+	display: flex;
+    justify-content: space-around;
+    flex-flow: row;
+}
+
+
+.herramientas > a,
+.herramientas > input
+{
+    border: 0px solid skyblue;
+    padding: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+   	width:40%; 
+    height: 30px;
+    background-color: #cecece;
+    text-align: center;
+    color: #000;
+}
+
+form{
+	width: 40%;
+	border: 1px solid #cecece4d;
+	display: flex;
+	justify-content: space-around;
+	flex-flow: row wrap;
+	border-bottom: 1px solid #1b2ca5;
+	border-radius: 4px;
+}
+.cabecera{
+	min-height:40px; 
+	padding: 10px;
+	width: 100%;
+	border-bottom: 1px solid #cecece;
+	text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.errors
+{
+	min-height:10px; 
+	width: 100%;
+	padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row;
+    color: red;
+}
+form > div
+/*form > div:not(nth-child())*/
+
+{
+	min-height:40px; 
+	width: 100%;
+	padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row;
+}
+/*:not(nth-child(.herramientas))*/
+form > div > input
+{
+	width: 58%;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid;
+}
+main{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 40px;
+	min-height: 300px;
+	overflow: auto;
+}
+
+
+
+
+footer {
+   position:relative;
+   left:0px;
+   bottom:0px;
+   height:50px;
+   width:100%;
+   background:#999;
+   text-align: center;
+   margin-top: 80px;
+   border-top: 1px solid #19020287;
+   padding-top: 15px;
+}
+
+
